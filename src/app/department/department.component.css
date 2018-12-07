@@ -1,0 +1,21 @@
+.card{
+    padding-left: 12%;
+    padding-top: 12%;
+    padding-bottom: 12%;
+    padding-right:18%;
+}
+
+.butty{
+    color: white;
+    font-size:1.1em;
+    font-weight: 600;
+    padding: 10px 25px;
+    border: 2px solid #167ce9;
+    background-color: #167ce9;
+    border-radius: 25px;
+}
+
+.butty:hover{
+    background-color: white;
+    color: #167ce9;
+}

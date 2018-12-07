@@ -1,21 +1,97 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="forbg">
+<mat-toolbar class="medical">
+  <span style="font-weight:bold;font-size:1.5em;">Medico.<span style="color:#167ce9;font-weight: bold;">AI</span></span>
+  <span class="medic"></span>
+  <span class="inlines">Home</span>
+  <span class="inlines">Departments</span>
+  <span class="inlines">Doctors</span>
+  <span class="inlines">Contact</span>
+  <a mat-button (click)="openLoginForm()" class="anote">Upload your Image</a>
+</mat-toolbar>
+<div class="front-div"></div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="main">
+    <p style="font-weight:500;font-size:4em;color:white;">Automated diagnostics for X-ray images in dentistry</p>
+    <p style="font-weight:500;font-size:1.5em;color:white;">Medico.AI helps dentists interpret X-ray images and find 100% more potential pathologies using artificial intelligence</p>
+</div>
+<div class="outerdiv">
+    <div class="searo">
+      <div *ngFor="let de of depts" (click)="onclicks(de)" class="searo1">
+        <p style="padding:20px;font-size:1.25em;font-weight: bold;margin-top:5%;"><span><img src="{{de.title}}"/></span>  {{de.name}}</p>
+      </div>
+    </div>
+      <div class="searo2">
+          <app-department [dept]="selectedDept"></app-department>
+      </div>
+</div>
+
+<div class="backdiv">
+    <div *ngFor="let un of univa" class="univar1">
+      <img src="/assets/images/my-icons-collection/png/right-arrow.png" class="backo"/>
+      <div class="ingo">
+      <p style="padding-bottom:15px;color: #167ce9;font-size: 1.75em;">{{un.name}}</p>
+      <p style="color:#39345a;font-size:1.10em;font-weight:600">{{un.field}}</p>
+      </div>
+    </div>
+</div>
+
+<div>
+  <p class="ptag">Some Experienced Doctors who helped us in building this marvel</p>
+  <div class="fordoc">
+    <div fxFlex *ngFor="let do of doctors" class="innerdoc">
+      <mat-card>
+        <img mat-card-image src={{do.image}} alt={{do.name}}>
+        <mat-card-title>
+          <h3 style="font-size:0.75em;">{{do.name}}</h3>
+        </mat-card-title>
+        <mat-card-subtitle>{{do.subtitle}}</mat-card-subtitle>
+        <mat-card-content>
+          <p>{{do.description}}
+          </p>
+        </mat-card-content>
+       </mat-card>
+    </div>
+  </div>
+  <p class="pta">We are well experienced doctors
+      A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+</div>
+
+<div class="abot">
+  <div style="background-color: #167ce9;opacity: 0.4;">
+  <p class="ptag" style="color:black;border-bottom: 2px solid black;font-size:1.25em;width: 10%;margin-left:auto;margin-right:auto;padding-bottom: 1%;margin-bottom:5%;">About us</p>
+  <div class="foun">
+    <h1 style="border-bottom:2px solid black;width:20%;margin-left:auto;margin-right:auto;padding-bottom:0.5%;color: black;">Founders</h1>
+    <p style="width:30%;margin-left:auto;margin-right:auto;padding-bottom:7.80%; padding-top:1.5%;font-size:1.5em;font-weight: 600;"><span style="color:black">Pramod</span> & <span style="color:black;">Shiva</span></p>
+  </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="innerfooter">
+    <div class="div1">
+      <h3 class="heady">Medico.AI</h3>
+      <p class="work">This is about medico.ai where we will add more texts further to this one.ar from the countries Vokalia and Consonantia, there live the blind texts.</p>
+    </div>
+    <div class="div2">
+      <h3 class="heady site">Site Links</h3>
+      <p class="site work">Home</p>
+      <p class="site work">Departments</p>
+      <p class="site work">Doctor</p>
+      <p class="site work">Contact</p>
+    </div>
+    <div class="div3">
+      <h3 class="heady">Have Questions?</h3>
+      <p class="work">vishnupur, vit, bhimavaram</p>
+      <p class="work">+91 9160272005</p>
+      <p class="work">prkpramod@gmail.com</p>
+    </div>
+  </div>
+  <p style="text-align: center;padding-bottom:4%;background-color: #39345a;
+  opacity: 0.95;color: white;font-size:1.20">Copyrights @2018 All rights reserved</p>
+</div>
+
+
+
+
 
 <router-outlet></router-outlet>

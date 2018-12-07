@@ -1,0 +1,34 @@
+<div fxFlex *ngIf="dept">
+    <mat-card class="card">
+      <img mat-card-md-image src={{dept.image}} alt={{dept.name}} style="padding-bottom: 25px;padding-left:15px;">
+      <mat-card-header>
+        <mat-card-title>
+          <h3 style="font-weight:300;font-size: 1.5em;color: #39345a">{{dept.name}} Department</h3>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p style="line-height:28px;font-size:1.25em;padding-left: 15px;color: #7782aa;padding-top: 10px;">{{dept.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions style="padding-left: 20px;">
+        <button  mat-button class="butty">Learn more</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div fxFlex *ngIf="!dept">
+      <mat-card class="card">
+        <img mat-card-md-image src={{depo.image}} alt={{depo.name}} style="padding-bottom: 25px;padding-left:15px;">
+        <mat-card-header>
+          <mat-card-title>
+            <h3 style="font-weight:300;font-size: 1.5em;color: #39345a;">{{depo.name}} Department</h3>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p style="line-height:28px;font-size:1.25em;padding-left: 15px;color: #7782aa;padding-top: 10px;">{{depo.description}}</p>
+        </mat-card-content>
+        <mat-card-actions style="padding-left: 20px;">
+          <button mat-button class="butty">Learn more</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
