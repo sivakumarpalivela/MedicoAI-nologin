@@ -1,8 +1,8 @@
 <div class="forbg">
 <mat-toolbar class="medical">
-  <span style="font-weight:bold;font-size:1.5em;">Medico.<span style="color:#167ce9;font-weight: bold;">AI</span></span>
+  <span style="font-weight:bold;font-size:1.5em;">Medico<span style="color:#167ce9;font-weight: bold;">.AI</span></span>
   <span class="medic"></span>
-  <span class="inlines">Home</span>
+  <span class="inlines"><a href="#" style="text-decoration-line:none;color:black" class="inlines">Home</a></span>
   <span class="inlines">Departments</span>
   <span class="inlines">Doctors</span>
   <span class="inlines">Contact</span>
@@ -11,13 +11,13 @@
 <div class="front-div"></div>
 </div>
 <div class="main">
-    <p style="font-weight:500;font-size:4em;color:white;">Automated diagnostics for X-ray images in dentistry</p>
-    <p style="font-weight:500;font-size:1.5em;color:white;">Medico.AI helps dentists interpret X-ray images and find 100% more potential pathologies using artificial intelligence</p>
+    <p style="font-weight:500;font-size:4em;color:white;padding-bottom:3%;">Automated diagnostics for X-ray images in dentistry</p>
+    <p style="font-weight:500;font-size:1.5em;color:white;">Medico<span style="color:#167ce9;font-weight: bold;">.AI</span> helps dentists interpret X-ray images and find 100% more potential pathologies using artificial intelligence</p>
 </div>
 <div class="outerdiv">
     <div class="searo">
       <div *ngFor="let de of depts" (click)="onclicks(de)" class="searo1">
-        <p style="padding:20px;font-size:1.25em;font-weight: bold;margin-top:5%;"><span><img src="{{de.title}}"/></span>  {{de.name}}</p>
+        <p style="padding:20px;font-size:1.25em;font-weight: bold;margin-top:8%;"><span><img src="{{de.title}}"/></span>  {{de.name}}</p>
       </div>
     </div>
       <div class="searo2">

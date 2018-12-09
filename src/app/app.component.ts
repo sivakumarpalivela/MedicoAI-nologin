@@ -30,7 +30,7 @@ export class AppComponent implements OnInit{
   }
 
   openLoginForm() {
-    this.dialog.open(FormComponent, {width: '500px', height: '450px'});
+    this.dialog.open(FormComponent, {width: '900px', height: '700px'});
   }
 
 }

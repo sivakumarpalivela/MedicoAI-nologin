@@ -48,11 +48,14 @@
 }
 .outerdiv{
     display: flex;
+    
 }
 .searo{
     width:25%;
     margin-left:12%;
     background-color: #167ce9;
+    padding-top: 4%;
+    border-radius: 5px;
 }
 .searo2{
     width: 70%;

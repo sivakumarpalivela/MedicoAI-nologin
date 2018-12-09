@@ -1,5 +1,17 @@
-<mat-toolbar color="primary">
-    Login
-  <span class="flex-spacer"></span>
-  <button mat-button mat-dialog-close>&times;</button>
+<mat-toolbar class="uplo">
+    Upload Your Image
+    <span class="medic"></span>
+  <button mat-button mat-dialog-close class="some">&times;</button>
 </mat-toolbar>
+
+<div class="nova">
+  <div>
+    <div>
+      <form #imageForm=ngForm (ngSubmit)="OnSubmit(Image)">
+        <img [src]="imageUrl"  style="width:800px;height:400px;">
+        <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)" class=".mega">
+        <button type="submit" class="btn-large btn-submit" [disabled]="Image.value=='' || !imageForm.valid" class="inno">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
